@@ -316,28 +316,45 @@
             <div class="col">
                 <h1 class="pt-5">LET'S STAY IN TOUCH</h1>
                 <p>Get updates on sales specials and more</p>
-                  
-                  <div class="input-group mb-5 email-btn mx-auto">
-                    <input type="text" class="form-control " placeholder="Enter Your Email " aria-label="Enter Your Email" aria-describedby="button-addon2">
-                    <button class="btn btn-danger" type="button" id="button-addon2">Send</button>
-                  </div>
-                  
+
+                <div class="input-group mb-5 email-btn mx-auto ">
+                    <input id="input-field" type="text" class="form-control " placeholder="Enter Your Email "
+                        aria-label="Enter Your Email" aria-describedby="button-addon2">
+                    <button id="btn-update" class="btn btn-danger" type="button" id="button-addon2">Send</button>
+                </div>
+
             </div>
 
         </div>
 
 
     </footer>
-
-
-
-
-
-
-
+    <script src="js/event.js"> </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
+
+    <script>
+        document.getElementById('btn-update').addEventListener('click', function () {
+
+            const inputField = document.getElementById('input-field');
+            // console.log(inputField.value);
+            const inputText = inputField.value;
+
+            const p = document.getElementById('input-text-display');
+            p.innerText = inputText;
+
+             inputField.value = '';
+
+
+            // console.log('update button click');
+
+        })
+
+
+    </script>
+
+
 </body>
 
 </html>
